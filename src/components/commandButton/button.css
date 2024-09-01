@@ -1,0 +1,22 @@
+#commandButton{
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    text-decoration: underline;
+    font-weight: bolder;
+    border: none;
+    background-color: greenyellow;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 black;
+}
+
+#commandButton:hover{
+    background-color: rgb(209, 255, 139);
+    transition: all .1s;
+}
+
+#commandButton:active{
+    box-shadow: 0 0px 0 black;
+    transform: translateY(3px);
+}

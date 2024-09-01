@@ -1,0 +1,81 @@
+#navbar{
+    position: sticky;
+    margin-top: 20px;
+    top: 0;
+    background-color: #FF5656;
+    width: 95%;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black ;
+    border-radius: 0 20px ;
+}
+
+#navbts{
+    display: flex;
+    gap: 20px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    position: relative;
+    margin-right: 50px;
+    height: 100%;
+    padding: 0;
+}
+
+#username , h3{
+    text-decoration: underline;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+#userPropriety{
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    border-radius: 0 0 20px 20px;
+    background-color: antiquewhite;
+}
+
+
+
+
+
+
+
+@media (max-width : 800px) {
+#navbts{
+    width: 400px;
+    margin-right: 10px;
+}
+
+#navbts #username{
+    width: 100%;
+    margin: 0;
+    font-size: 20px;
+}
+    
+#userPropriety{
+    top: 50px;
+    left: -80px;
+    width: 250px;
+
+}
+
+#userPropriety h3{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
+
+}
+
+}

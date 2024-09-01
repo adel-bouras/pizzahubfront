@@ -1,0 +1,104 @@
+#landingPage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 30px;
+}
+
+#hero{
+    width: 70%;
+    height: 70vh;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #7A5555;
+    border-radius: 30px 0;
+    border: 3px solid tomato;
+}
+
+#hero img {
+    width: 30%;
+    object-fit: contain;
+}
+
+#hero h1{
+    width: 100%;
+    text-align: center;
+}
+
+#types h1{
+    width: 100%;
+    text-align: center;
+}
+
+#types{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.type h1{
+    text-decoration: underline;
+
+}
+
+.type{
+    flex-wrap: wrap;
+}
+
+
+#pizza img, #tacos  img, #panini  img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.pizza , .tacos , .panini{
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #ff8989;
+    gap: 10px;
+    width: 400px;
+}
+
+#pizza , #tacos , #panini{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+@media (max-width : 800px) {
+#hero{
+    width: 90%;
+
+}
+
+#hero img {
+    width: 80%;
+    object-fit: contain;
+}
+
+#hero h1{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+.pizza , .tacos , .panini{
+    width: 250px;
+}
+#pizza img, #tacos  img, #panini  img{
+    width: 150px;
+    height: 150px;
+}
+
+
+}

@@ -1,0 +1,19 @@
+#registerButton{
+    width: 100px;
+    color: #FF5656;
+    height: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width : 800px) {
+    #registerButton{
+    width: 70px;
+    font-size: 15px;
+    }
+    }

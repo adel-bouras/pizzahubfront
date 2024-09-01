@@ -1,0 +1,51 @@
+#loginPage{
+    min-width: 100%;
+    min-height : 100vh ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebadad;
+}
+
+#formLogin{
+    display: flex;
+    flex-direction: column;
+}
+
+#formLogin input{
+width: 300px;
+height: 30px;
+margin-bottom: 10px;
+padding-left: 10px;
+border: none;
+background-color: bisque;
+}
+
+#formLogin button{
+    cursor: pointer;
+    border: none;
+    background-color: #FF5656;
+    color: aliceblue;
+    width: 150px;
+    height: 30px;
+    font-weight: bolder;
+    align-self: flex-end;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-top: 50px;
+    border-radius: 5px;
+    transition: all 100ms ease;
+    box-shadow: 0 5px 0 black;
+}
+
+#formLogin input:focus{
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #ff5656;
+}
+
+#formLogin button:active{
+    box-shadow: 0 0 0 black;
+    transform: translateY(7px);
+}
