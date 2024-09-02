@@ -20,7 +20,7 @@ function Register() {
     e.preventDefault();
     setLoading(true)
     try{
-      const response = await axios.post('https://localhost:8080/api/user/sendOTP',{
+      const response = await axios.post('https://pizzahub-hqln.onrender.com/api/user/sendOTP',{
         email : email
       });
       alert(`✅ ${response.data.message}`);

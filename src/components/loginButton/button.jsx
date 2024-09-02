@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function Button() {
   const navigate = useNavigate();
   const handleClick = ()=>{
-    navigate('./login');
+    navigate('/login');
   }
 
   return (

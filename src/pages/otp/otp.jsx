@@ -23,14 +23,14 @@ function Otp() {
     setLoading(true);
     try{
       const code = first + second + third + fourth;
-      const response = await axios.post('https://localhost:8080/api/user/register',{
+      const response = await axios.post('https://pizzahub-hqln.onrender.com/api/user/register',{
         email : email ,
         password : password,
         userName : userName,
         otp : code
       });
       Cookies.set('_id' , response.data._id);
-      Cookies.set('username' , response.data.username);
+      Cookies.set('username' , response.data.userName);
       Cookies.set('token' , response.data.token);
       Cookies.set('logged' , true);
       alert('✅ register success');

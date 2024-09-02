@@ -3,10 +3,12 @@ import Login from './../loginButton/button';
 import Register from './../registerButton/button';
 import Cookies from 'js-cookie'
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
 function Nav() {
+  const navigate = useNavigate()
 
   const [style , setStyle] = useState({display : 'none'});
 
@@ -19,7 +21,13 @@ function Nav() {
     }
   }
 
-
+const handlLogout = ()=>{
+  const allCookies = Cookies.get();
+  for (let cookie in allCookies) {
+    if(cookie !== 'consent') Cookies.remove(cookie);
+  }
+  navigate('/');
+}
   
 
   return (
@@ -38,10 +46,11 @@ function Nav() {
           ) :
           (<>
             <h2 onClick={handlClick} id='username'>{Cookies.get('username')}</h2>
+            <button id='logout' onClick={handlLogout}>LOGOUT</button>
             <div style={style} id='userPropriety'>
-              <h3>List All our pizza</h3>
+              <Link to={'/show'}>List All our pizza</Link>
               <hr />
-              <h3>List All your commands</h3>
+              <Link to={'/commands'}>List All your commands</Link>
             </div>
 
           </>)

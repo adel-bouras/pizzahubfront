@@ -4,7 +4,6 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding-bottom: 30px;
 }
 
 #hero{
@@ -51,10 +50,13 @@
 }
 
 
-#pizza img, #tacos  img, #panini  img{
-    width: 300px;
-    height: 300px;
-    object-fit: contain;
+#types img{
+    width: 350px;
+    height: 350px;
+    object-fit: fill;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 5px solid tomato;
 }
 
 .pizza , .tacos , .panini{
@@ -64,7 +66,6 @@
     display: flex;
     flex-direction: column;
     background-color: #ff8989;
-    gap: 10px;
     width: 400px;
 }
 
@@ -75,8 +76,30 @@
     gap: 50px;
 }
 
+    #footer{
+        background-color: rgb(156, 156, 156);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 50px;
+        height: 50px;
 
+    }
+
+#heroText{
+    color: antiquewhite;
+    text-decoration: overline underline;
+}
 @media (max-width : 800px) {
+    #pizza , #tacos , #panini{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+        row-gap: 50px;
+    }
+
 #hero{
     width: 90%;
 

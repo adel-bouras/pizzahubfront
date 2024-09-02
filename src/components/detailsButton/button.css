@@ -1,6 +1,5 @@
 #detailsButton{
-    margin-top: 30px;
-
+    align-self: flex-end;
     height: 30px;
     width: 100px;
     border: 2px solid red;

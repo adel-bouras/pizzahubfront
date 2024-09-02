@@ -10,14 +10,14 @@ function Login() {
   const [password , setPassword] = useState('');
   const [error , setError] = useState('');
   const [loading , setLoading] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
 
   const handlesubmite = async (e)=>{
     e.preventDefault();
     setLoading(true);
     try{
-      const response = await axios.post('https://localhost:8080/api/user/login' , 
+      const response = await axios.post('https://pizzahub-hqln.onrender.com/api/user/login' , 
         {
           email : email,
           password : password
@@ -27,7 +27,7 @@ function Login() {
       Cookies.set('_id' , response.data._id);
       Cookies.set('username' , response.data.userName);
       Cookies.set('logged' , true);
-       navigate('/');
+      navigate('/');
       
     }catch(e){
       setError(e.response.data.message);
