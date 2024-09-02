@@ -52,7 +52,6 @@ function Show() {
 
     fetchData();
   }, []);
-  console.log(data);
   
 
   return (

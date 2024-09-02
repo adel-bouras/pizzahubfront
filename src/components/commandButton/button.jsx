@@ -1,29 +1,31 @@
 import { useState } from 'react';
 import './button.css';
 import Cookies from 'js-cookie';
+import axios from 'axios';
+import { ClipLoader } from 'react-spinners';
 
 
-function Button() {
+
+function Button(props) {
   const [loading , setLoading] = useState(false);
 
   const handleClick = async ()=>{
     setLoading(true);
     try{
 
-      const response = await axios.post('https://localhost:8080/api/user/command',{
-        data : {
+      const response = await axios.post('https://pizzahub-hqln.onrender.com/api/user/command',
+        {
           _id :  Cookies.get('_id'),
           productId : `${props.productId}`
-        },
-        headers : {
-          Authorization : `Bearer ${Cookies.get('token')}`
+        },{
+          headers: {
+            Authorization: `Bearer ${Cookies.get('token')}`
+          }
         }
-      });
-    console.log(response);
-    alert("👊 product commanded successfully");
+      );
+    alert(`👊  ${response.data.message}`);
     }catch(e){
-      console.log(e);
-    alert("😥 Fail to command this product");
+    alert(`😥 ${e.response.data.message}`);
     }finally{
       setLoading(false);
     }
