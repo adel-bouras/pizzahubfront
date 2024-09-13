@@ -23,7 +23,7 @@ function Otp() {
     setLoading(true);
     try{
       const code = first + second + third + fourth;
-      const response = await axios.post('https://pizzahub-hqln.onrender.com/api/user/register',{
+      const response = await axios.post('https://pizzastoreback.onrender.com/api/user/register',{
         email : email ,
         password : password,
         userName : userName,

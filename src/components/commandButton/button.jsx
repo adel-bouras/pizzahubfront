@@ -13,7 +13,7 @@ function Button(props) {
     setLoading(true);
     try{
 
-      const response = await axios.post('https://pizzahub-hqln.onrender.com/api/user/command',
+      const response = await axios.post('https://pizzastoreback.onrender.com/api/user/command',
         {
           _id :  Cookies.get('_id'),
           productId : `${props.productId}`

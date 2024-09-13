@@ -21,7 +21,7 @@ function Details() {
         if (product) {
           // Fetch images
           const imagePromises = product.images.map(async (img) => 
-            await axios.get(`https://pizzahub-hqln.onrender.com/uploads/${img}`, { responseType: 'blob' })
+            await axios.get(`https://pizzastoreback.onrender.com/uploads/${img}`, { responseType: 'blob' })
           );
 
           const imageResponses = await Promise.all(imagePromises);

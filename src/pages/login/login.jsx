@@ -17,7 +17,7 @@ function Login() {
     e.preventDefault();
     setLoading(true);
     try{
-      const response = await axios.post('https://pizzahub-hqln.onrender.com/api/user/login' , 
+      const response = await axios.post('https://pizzastoreback.onrender.com/api/user/login' , 
         {
           email : email,
           password : password

@@ -14,7 +14,7 @@ function Button(props) {
     setLoading(true);
     try{
 
-      const response = await axios.get('https://pizzahub-hqln.onrender.com/api/user/details',{
+      const response = await axios.get('https://pizzastoreback.onrender.com/api/user/details',{
         params : {
           productId : `${props.productId}`
         },

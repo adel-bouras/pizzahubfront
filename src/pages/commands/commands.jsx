@@ -15,7 +15,7 @@ function Commands() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`https://pizzahub-hqln.onrender.com/api/user/listCommands?_id=${Cookies.get('_id')}`, {
+        const response = await axios.get(`https://pizzastoreback.onrender.com/api/user/listCommands?_id=${Cookies.get('_id')}`, {
           headers: {
             Authorization: `Bearer ${Cookies.get('token')}`
           }
@@ -26,7 +26,7 @@ function Commands() {
         // Fetch images
         const imagePromises = fetchedData.flatMap(ob =>
           ob.images.map(img => 
-            axios.get(`https://pizzahub-hqln.onrender.com/uploads/${img}`, { responseType: 'blob' })
+            axios.get(`https://pizzastoreback.onrender.com/uploads/${img}`, { responseType: 'blob' })
           )
         );
 
